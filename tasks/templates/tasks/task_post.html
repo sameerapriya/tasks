@@ -1,0 +1,21 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button  class="btn btn-primary" type="submit">Submit</button>
+    </form>
+
+<script>
+    $(function () {
+      $("#id_task_from").datetimepicker({
+        format: 'd/m/Y H:i',
+      });
+    });
+    $(function () {
+      $("#id_task_to").datetimepicker({
+        format: 'd/m/Y H:i',
+      });
+    });
+</script>
+{% endblock %}

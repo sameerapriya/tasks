@@ -1,0 +1,16 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+ 
+    {% for task in tasks %}
+    <div class="card" style="width: 18rem;margin: 30px;align-items: center;">
+        <div class="card-body">
+        <h5 class="card-title">Name : {{ task.name }}</h5>
+        <h6 class="card-subtitle mb-2 ">From : {{ task.task_from }}</h6>
+        <h6 class="card-subtitle mb-2 ">To : {{ task.task_to }}</h6>
+        <p class="card-text">{{ task.details }}</p>
+        <h6 class="card-subtitle mb-2 ">Status : {{ task.get_status_display }}</h6>
+        </div>
+    </div>
+    {% endfor %}
+    
+{% endblock %}

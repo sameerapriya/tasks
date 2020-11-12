@@ -1,0 +1,11 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+<form style="margin: 60px;align-content: center;">
+    {% csrf_token %}
+    <label for="date">Task Date:</label>
+    <input type="date" id="date" name="date"> 
+    <button  class="btn btn-primary" type="submit"> Submit </button>
+</form>
+ {% endblock %}
+
+ 
